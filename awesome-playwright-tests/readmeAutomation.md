@@ -1,7 +1,8 @@
 
 # Creating a new Playwright project
 
-let's create a new test project. 
+### let's create a new test project.  
+
 ## Create a new directory:
 
 ```mkdir awesome-playwright-tests```
@@ -12,7 +13,7 @@ Then, initialize Playwright:
 
 ```npm init playwright@latest```
 
-The init command will ask a series of prompts. Accept the default answers for the questions:
+### The init command will ask a series of prompts. Accept the default answers for the questions:
 
 * Select TypeScript for the project language.
 * Select tests as the test directory.
@@ -41,23 +42,17 @@ Tests will take a few seconds to run. Results should look something like this:
 Running 78 tests using 4 workers
   78 passed (15.0s)
 
-To open last HTML report run:
-
-  ```npx playwright show-report```
-  
-Playwright will automatically run tests in parallel across multiple workers. (You can explicitly set the number of workers it uses as well.) If you look carefully at the console output while tests are running, you will also see that Playwright will automatically run all tests across the three browser projects: Chromium, Firefox, and WebKit. (That's why the messages report 26 x 3 = 78 tests in total.)
-
-You can view the full test report by running:
+## To open last HTML report run:
 
 ```npx playwright show-report```
 
 This opens the report in a browser. You can filter tests and click on results to view deeper trace. Each results also bears a label for the browser it targeted.
 
+Playwright will automatically run tests in parallel across multiple workers. (You can explicitly set the number of workers it uses as well.) If you look carefully at the console output while tests are running, you will also see that Playwright will automatically run all tests across the three browser projects: Chromium, Firefox, and WebKit.
+
 If you want to run tests against only one browser instead of all browsers, add the --project argument with the name of the browser. For example, to run tests against Chromium only, run:
 
 ```npx playwright test --project chromium```
-
-By default, Playwright runs tests headlessly, meaning that it does not open a browser window to visually render the pages. To see the pages rendered while tests are running, add the --headed option. However, headed execution will slow down execution, and should be reserved primarily for debugging tests one at a time.
 
 For example:
 
