@@ -1,9 +1,11 @@
 
 # Creating a new Playwright project
 
-let's create a new test project. Create a new directory:
+let's create a new test project. 
+## Create a new directory:
 
 ```mkdir awesome-playwright-tests```
+
 ```cd awesome-playwright-tests```
 
 Then, initialize Playwright:
@@ -29,6 +31,7 @@ The command will also install the Playwright browser projects: Chromium, Firefox
 Note: If you are setting up an existing project that has Playwright as a dependency, then you will need to run npm install and then npx playwright install to install Playwright properly.
 
 ## Running the tests from the command line
+
 Running tests from UI mode is helpful when developing the app and the tests, but it's not ideal for running tests in a Continuous Integration (CI) system. You can run tests directly from the command line like this:
 
 ```npx playwright test```
